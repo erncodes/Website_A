@@ -254,7 +254,7 @@ body{
 .contact-section {
     height: 80vh;
     width: 105%;
-    background-image: url(/imageS/matt-wang-lnjQDLEKppI-unsplash.jpg);
+    background-image: url(images/matt-wang-lnjQDLEKppI-unsplash.jpg);
     background-position: center;
     transform: translateX(-3%);
     background-size: cover;
