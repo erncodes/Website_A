@@ -540,7 +540,6 @@ form .button-15{
 .contact-section {
     height: 175vh;
     width: 100%;
-    padding: 10px 10px 00px 40px !important; 
 }
 .formDiv{
     background: rgba(0, 0, 0, 0.6);
@@ -576,7 +575,6 @@ form .button-15{
     .contact-section {
         height: 180vh;
         width: 100%;
-        padding: 0px 0px 10px 20px !important;
     }
     .addressDiv-content{
         width: 90%;
