@@ -8,9 +8,8 @@
     box-sizing: border-box;
     font-family: "Overpass", sans-serif;
 }
-body{
-    overflow-x: hidden;
-}
+html, body {width: auto!important; overflow-x: hidden!important}
+
 ::-webkit-scrollbar {
     width: 10px;
     transition: all 1s ease-in;
@@ -108,7 +107,6 @@ body{
     background-size: cover;
     background-position: center;
     height: 80vh; width: 110%;
-    margin: 0 !important;
     transform: translateX(-5%);
     border-radius:20% 0 80% 0;
     text-align: end;
@@ -118,18 +116,12 @@ body{
     padding: 15px;
     margin-top: 35px;
     border-radius:20% 0 0 20%;
-    transform: translateX(-1%);
 }
 #introDiv1 p{
     background: rgba(0, 0, 0, 0.6);
     padding-left: 5rem;
 }
-#md-Intro-p{
-    display: none;
-}
-#sm-Intro-p{
-    display: none;
-}
+
 .slideshow {
     position: relative;
     background: white;
@@ -149,7 +141,6 @@ body{
 }
 .paragraph-slide h2{
     position: absolute;
-    transform: translate(10%,10%) !important;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius:1.5rem;
     background: white;
@@ -206,9 +197,9 @@ body{
     height: 80vh;
     position: relative;
     background: linear-gradient(to bottom,black,black,black);
-    overflow: hidden;
     margin-top: 50px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    overflow: hidden;
 }
 #section-services svg{
     position: absolute;
@@ -252,14 +243,12 @@ body{
 }
   /*****contact*****/
 .contact-section {
+    padding-top: 30px;
     height: 80vh;
-    width: 105%;
-    background-image: url(images/matt-wang-lnjQDLEKppI-unsplash.jpg);
+    width: 100%;
+    background-image: url(/imageS/matt-wang-lnjQDLEKppI-unsplash.jpg);
     background-position: center;
-    transform: translateX(-3%);
     background-size: cover;
-    padding: 50px 80px 50px 110px;
-    
 }
 .contact-title {
     margin-bottom: 30px;
@@ -275,6 +264,7 @@ body{
     align-items: center;
     box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
     border-radius: 20px;
+    min-height: 500px;
 }
  .form-group
 {
@@ -291,10 +281,9 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
     box-shadow: rgba(255, 255, 255, 0.684) 0px 5px 15px;
     border-radius: 10px;
-    overflow-x: hidden;
+    min-height: 500px;
 }
 .addressDiv-content{
     background: #ffffff;
@@ -304,7 +293,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 110%;
+    width: 100%;
 }
 .addressDiv-content p{
     color: black;
@@ -367,18 +356,7 @@ form .button-15{
       opacity: 0;
     }
   }
-  @keyframes slide_para {
-    0%{
 
-    }
-    50%{
-
-    }
-    100%
-    {
-
-    }
-  }
 /*****media queries*****/
 
  @media (min-width:1200px) {
@@ -401,9 +379,11 @@ form .button-15{
    #introDiv1 p{
     font-size: 18px !important;
 }
-#md-Intro-p{
-    display: block;}
+
 #section-services{
+    height: 100vh;
+}
+.contact-section {
     height: 100vh;
 }
  }
@@ -411,80 +391,20 @@ form .button-15{
    .form-group{
     width: 350px;
    }
-   #md-Intro-p{
-    display: block;
-}
+
 #section-services{
+    height:50rem;
+}
+.contact-section {
     height: 100vh;
 }
  }
  @media (max-width:769px) {
-    .button-15 {
-        font-size: 15px;
-      }
-    #headerbgdiv{
-        height: 75vh; width: 110%;
-        padding-right: 40px;
-        border-radius:20% 0 30% 0;
-        margin: -10px 0 75px 0 !important;
-        text-align: end;
-    }
-    #introDiv1{
-        z-index: 5;
-    }
-    #introDiv1 p{
-        font-size: 18px !important;
-    }
-    #lrg-Intro-p{
-        display: none;
-    }
-    #lrg-Intro-h{
-        display: none;
-    }
-    #md-Intro-p{
-        display: none;
-    }
-    
-    .slideshow {
-        background: transparent;
-        width: 110%;
-    }
-    .slideshow img{
-        border-radius:20% 0 40% 0;
-        width: 105%;
-        height: 45vh;
-    }
-    .paragraph-slide{
-        margin-top: -7.5rem;
-    }
-    .paragraph-slide h2{
-        font-size:1.5rem;
-        transform: translateX(65%);
-    }
-    .slideshow img:not(:first-child) {
-        top: 2.5rem;
-    }
-    .slider-deco{
-        bottom: -4.5rem;
-        width: 115%;
-        transform: translateX(-1%);
-        z-index: 6 !important;
-    }
-    /*****services*****/
-    .lg-serv{
-        display: none;
-    }
-#section-services{
-    height: 150vh;
-}
-#section-services svg{
-    display: none;
-}
-
+  
 /**contact***/
 .contact-section {
-    height: 140vh;
-    width: 105%;
+    height: 175vh;
+    width: 100%;
     padding: 10px 10px 10px 40px;
 }
 .formDiv{
@@ -503,9 +423,6 @@ form .button-15{
 {
     width: 600px;
 }
-.addressDiv{
-    overflow-x: hidden;
-}
 /*****footer*****/
 .copyrights-content p{
     font-size: 0.85rem;
@@ -514,65 +431,52 @@ form .button-15{
 .section-divider{
     margin-top: 24px !important
 }
- }
+#section-services{
+    height: 65rem;
+}
+}
  @media (max-width:577px) {
     .button-15 {
         font-size: 15px;
       }
-    #headerbgdiv{
-        height: 70vh; width: 110%;
-        margin: -10px 0 70px 0 !important;
-        padding-right: 25px;
-        border-radius:20% 0 30% 0;
-        overflow: visible;
-    }
     #introDiv1{
         z-index: 5;
     }
-    #introDiv1 p{
-        font-size: 15px !important;
-    }
-    #lrg-Intro-p{
+    #lrg-intro{
         display: none;
     }
-    #lrg-Intro-h{
+    #md-intro{
         display: none;
     }
-    #md-Intro-p{
-        display: none;
+    #sm-intro p{
+        font-size: 1rem !important;
     }
-    .slideshow {
-        margin-top: 3rem !important;
+    #sm-intro h5{
+        font-size: 1rem;
     }
     .slideshow img{
-        margin-top: -2.6rem;
-        border-radius:20% 0 40% 0;
-        width: 110% !important;
-        transform: translateX(-5%);
-        height: 40vh;
+        margin-top: 0rem;
     }
     .paragraph-slide{
-        margin-top: -4.5rem;
+        margin-top: 0rem;
     }
     .paragraph-slide h2{
-        font-size:larger !important;
+        top: 0;
+        left: 0;
+        transform: translate(15%,-15%);
     }
+    
     .slideshow img:not(:first-child) {
-        top: -2.6rem;
-    }
-    .slider-deco{
-        bottom: -3.7rem;
-        width: 110%;
-        z-index: 6 !important;
+        left: 0;
+        top: 0rem;
     }
     /*****services*****/
     .lg-serv{
         display: none;
     }
 #section-services{
-    height: 190vh;
-    width: 105%;
-    transform: translateX(-2%);
+    min-height: 70rem;
+    width: 100%;
 }
 #section-services svg{
     display: none;
@@ -580,10 +484,9 @@ form .button-15{
 
 /**contact***/
 .contact-section {
-    height: 140vh;
-    width: 105%;
+    height: 175vh;
+    width: 100%;
     padding: 10px 10px 10px 40px;
-    transform: translateX(-4%);
 }
 .formDiv{
     background: rgba(0, 0, 0, 0.6);
@@ -600,9 +503,7 @@ form .button-15{
 {
     width: 400px;
 }
-.addressDiv{
-    overflow-x: hidden;
-}
+
 /*****footer*****/
 .copyrights-content p{
     font-size: 0.85rem;
@@ -621,60 +522,15 @@ form .button-15{
     .button-15 {
         font-size: 15px;
       }
-    #headerbgdiv{
-        height: 55vh !important; width: 115%;
-        padding-right: 25px;
-        border-radius:20% 0 30% 0;
-        margin: -10px 0 140px 0 !important;
-        text-align: end;
-    }
-    #introDiv1{
-        z-index: 5;
-    }
-    #introDiv1 p{
-        font-size: 12px !important;
-    }
-    #lrg-Intro-p{
-        display: none;
-    }
-    #lrg-Intro-h{
-        display: none;
-    }
-    .slideshow {
-        border-radius:20% 0 30% 0;
-        margin-top: 5.5rem !important;
-    }
-    .slideshow img{
-        margin-top: -2.6rem;
-        border-radius:20% 0 40% 0;
-        width: 110% !important;
-        transform: translateX(-5%);
-        height: 15rem;
-    }
-    .paragraph-slide{
-        margin-top: -4.5rem;
-    }
-    .paragraph-slide h2{
-        font-size:larger !important;
-    }
-    .slideshow img:not(:first-child) {
-        top: -2.6rem;
-    }
-    .slider-deco{
-        bottom: -6.5rem;
-        width: 110%;
-        z-index: 6 !important;
-    }
+ 
     /*****services*****/
-    .lg-serv{
-        display: none;
-    }
+  
 #section-services svg{
     display: none;
 }
 #section-services{
     height:80rem;
-    width: 105%;
+    width: 100%;
     padding: 0 15px !important;
 }
 .addressDiv-content{
@@ -682,8 +538,8 @@ form .button-15{
 }
 /**contact***/
 .contact-section {
-    height: 130vh;
-    width: 105%;
+    height: 175vh;
+    width: 100%;
     padding: 10px 10px 00px 40px !important; 
 }
 .formDiv{
@@ -701,9 +557,7 @@ form .button-15{
 {
     width: 350px;
 }
-.addressDiv{
-    overflow-x: hidden;
-}
+
 /*****footer*****/
 .copyrights-content p{
     font-size: 0.65rem;
@@ -714,32 +568,14 @@ form .button-15{
 }
  }
  @media (max-width:391px) {
-    #headerbgdiv{
-        margin: -10px 0 140px 0 !important;
-
-        width: 120%;
-    }
-    .slideshow {
-        border-radius:20% 0 30% 0;
-        margin-top: 5.5rem !important;
-    }
-    .slideshow img{
-        margin-top: -2.6rem;
-        border-radius:20% 0 40% 0;
-        transform: translateX(-5%);
-        width: 110% !important;
-        height: 15rem;
-    }
-    .slider-deco{
-        bottom: -6.5rem;
-    }
+ 
     #section-services{
         height:80rem;
-        width: 105%;
+        width: 100%;
     }
     .contact-section {
-        height: 130vh;
-        width: 110%;
+        height: 180vh;
+        width: 100%;
         padding: 0px 0px 10px 20px !important;
     }
     .addressDiv-content{
@@ -748,186 +584,114 @@ form .button-15{
     }
  }
  @media (max-width:376px) {
-    #headerbgdiv{
-        margin: -10px 0 130px 0 !important;
-    }
-    .slideshow {
-        border-radius:20% 0 30% 0;
-        margin-top: 5rem !important;
-    }
-    .slideshow img{
-        margin-top: -2.6rem;
-        border-radius:20% 0 40% 0;
-        transform: translateX(-5%);
-        width: 110% !important;
-        height: 15rem;
-    }
-    .slider-deco{
-        bottom: -6.5rem;
-        width: 110%;
-        transform: translateX(-2%);
-    }
+    .button-15 {
+        height: 30px;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 13px;
+      }
+      .navbar-brand{
+        font-size: 1.4rem !important;
+      }
     #section-services{
-        height:90rem;
-        width: 105%;
-        padding: 0 15px !important;
+         max-height:75rem !important;
     }
     .contact-section {
-        height: 125vh;
-        width: 111%;
-        padding: 0px 0px 10px 20px !important;
+        height: 120vh !important;
+        width: 100%;
+        padding: 0 15px !important;
+    }
+    .form-group
+    {
+        max-width: 220px;
+    }
+    .address {
+        font-size: 0.9rem;
     }
     .formDiv{
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
-    border-radius: 20px;
-    margin-bottom: 5px;
-    height: auto;
-}
+        margin: 20px 10px 0 0 !important;
+        min-height: 320px;
+    }
+    .addressDiv{
+        margin: 10px 10px 0 0 !important;
+        min-height: 320px;
+    }
     .addressDiv-content{
-        width: 90%;
+      margin: 0 auto;
     }
  }
  @media (max-width:355px) {
     .button-15 {
-        height: 35px;
-        padding-left: 14px;
-        padding-right: 14px;
-        font-size: 14px;
+        height: 30px;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 13px;
       }
-    #headerbgdiv{
-        height: 55vh !important; width: 115%;
-        margin: -10px 0 95px 0 !important;
+      .navbar-brand{
+        font-size: 1.4rem !important;
+      }
+    #section-services{
+         max-height:75rem !important;
     }
-    #introDiv1 p{
-        font-size: 11px !important;
+    .contact-section {
+        height: 125vh !important;
+        width: 100%;
+        padding-left: 25px !important;
     }
-    #md-Intro-p{
-        display: none;
-    }
-    #introDiv1 h4{
-        font-size: 18px !important;
-    }
-    .slideshow {
-        border-radius:20% 0 30% 0;
-        margin-top: 3rem !important;
-    }
-    .slideshow img{
-        margin-top: -2.6rem;
-        border-radius:20% 0 40% 0;
-        width: 110% !important;
-        transform: translateX(-5%);
-        height: 35vh;
-    }
-    .paragraph-slide{
-        margin-top: -4.5rem;
-    }
-    .paragraph-slide h2{
-        font-size: medium !important;
-        transform: translateX(25px) !important;
-    }
-    .slideshow img:not(:first-child) {
-        top: -2.6rem;
-    }
-    .slider-deco{
-        bottom: -4.5rem;
-        width: 110%;
-        z-index: 6 !important;}
-        #section-services{
-            height:90rem;
-            width: 100%;
-            padding: 0 15px !important;
-        }
-        .contact-section {
-            height: 110vh;
-            width: 110%;
-            padding: 0px 10px 10px 20px !important;
-        }
     .form-group
     {
-        width: 220px;
+        max-width: 220px;
     }
     .address {
         font-size: 0.9rem;
-        color: #ffffff;
+    }
+    .formDiv{
+        margin: 20px 10px 0 0 !important;
+        min-height: 320px;
+    }
+    .addressDiv{
+        margin: 10px 10px 0 0 !important;
+        min-height: 320px;
     }
     .addressDiv-content{
-        width: 90%;
-        margin-right: 5px;
-    }
-    .copyrights-content p{
-        text-align: center;
-        font-size: 0.65rem;
-        font-weight: bold;
-        padding: 0 10px;
+      margin: 0 auto;
     }
  }
  @media (max-width:320px) {
+  
     .button-15 {
         height: 30px;
         padding-left: 10px;
         padding-right: 10px;
         font-size: 12px;
       }
-    #headerbgdiv{
-        height: 45vh !important; width: 115%;
-        margin: -10px 0 165px 0 !important;
-    }
-    #introDiv1 p{
-        font-size: 11px !important;
-    }
-    #md-Intro-p{
-        display: none;
-    }
-    #introDiv1 h4{
-        font-size: 18px !important;
-    }
-    .slideshow {
-        border-radius:20% 0 30% 0;
-        margin-top: 5rem !important;
-    }
-    .slideshow img{
-        margin-top: -2.6rem;
-        border-radius:20% 0 40% 0;
-        width: 110% !important;
-        transform: translateX(-5%);
-        height: 35vh;
-    }
-    .paragraph-slide{
-        margin-top: -4.5rem;
-    }
-    .paragraph-slide h2{
-        font-size: medium !important;
-        transform: translateX(5px);
-    }
-    .slideshow img:not(:first-child) {
-        top: -2.6rem;
-    }
-    .slider-deco{
-        bottom: -7.5rem;
-        width: 120%;
-        z-index: 6 !important;
-        transform: translateX(-5%);
-    }
+      .navbar-brand{
+        font-size: 1.1rem !important;
+      }
     #section-services{
-        height:95rem;
+        min-height:80rem;
     }
     .contact-section {
-        height: 120vh;
-        width: 113%;
-        padding: 10px 0px 0px 40px;
+        min-height: 120vh !important;
+        width: 100%;
     }
     .form-group
     {
-        width: 220px;
+        max-width: 220px;
     }
     .address {
         font-size: 0.9rem;
-        color: #ffffff;
+    }
+    .formDiv{
+        margin: 20px 10px 0 0 !important;
+        min-height: 320px;
+    }
+    .addressDiv{
+        margin: 10px 10px 0 0 !important;
+        min-height: 320px;
+    }
+    .addressDiv-content{
+      margin: 0 auto;
     }
     .copyrights-content p{
         text-align: center;
