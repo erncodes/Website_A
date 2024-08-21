@@ -112,7 +112,7 @@ html, body {width: auto!important; overflow-x: hidden!important}
 
 .slideshow {
     position: relative;
-    background: white;
+    background: rgba(255, 255, 255, 0);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius:20% 0 60% 0;
 }
@@ -382,20 +382,10 @@ form .button-15{
 }
  }
  @media (max-width:769px) {
-  
+  .paragraph-slide h2{
+font-size: 1.5rem !important;
+  }
 /**contact***/
-.formDiv{
-    border-right: 1px solid black;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
-    border-radius: 20px;
-    margin-bottom: 5px;
-    height: auto;
-}
  .form-group
 {
     width: 600px;
@@ -413,6 +403,10 @@ form .button-15{
 }
 }
  @media (max-width:577px) {
+    #headerbgdiv{
+        border-radius: 0;
+        text-align: end;
+    }
     .button-15 {
         font-size: 15px;
       }
@@ -442,6 +436,9 @@ form .button-15{
         left: 0;
         transform: translate(15%,-15%);
     }
+    .slider-deco{
+        display: none;
+    }
     
     .slideshow img:not(:first-child) {
         left: 0;
@@ -449,7 +446,7 @@ form .button-15{
     }
     /*****services*****/
     .lg-serv{
-        display: none;
+        display: none !important;
     }
 #section-services{
     min-height: 95rem;
