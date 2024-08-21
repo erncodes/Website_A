@@ -70,14 +70,14 @@ html, body {width: auto!important; overflow-x: hidden!important}
             height: 5px;
             width: 100%;
             top: 0;
-            z-index: 5;
+            z-index: 15;
         }
 /*****navbar/header*****/
 #navdiv{
     width: 100%;
     position: fixed;
     top: 5px;
-    z-index: 5;
+    z-index: 15;
 }
 .navbar{
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -95,19 +95,18 @@ html, body {width: auto!important; overflow-x: hidden!important}
     background-size: cover;
     background-position: center;
     height: fit-content; width: 110%;
-    transform: translateX(-5%);
+    transform: translateX(-1%);
     border-radius:20% 0 80% 0;
     text-align: end;
 }
 #introDiv1{
     color: rgb(255, 255, 255);
-    padding: 15px;
-    margin-top: 35px;
+    margin: 35px 0;
     border-radius:20% 0 0 20%;
 }
 #introDiv1 p{
     background: rgba(0, 0, 0, 0.6);
-    padding-left: 5rem;
+    padding: 0.5rem;
 }
 
 .slideshow {
@@ -156,6 +155,7 @@ html, body {width: auto!important; overflow-x: hidden!important}
     animation-timing-function: ease-in;
     transition: opacity 2s ease-in;
 }
+
 .slideshow img:nth-child(1) {
     animation-delay: 0s;
 }
@@ -382,9 +382,14 @@ form .button-15{
 }
  }
  @media (max-width:769px) {
+
   .paragraph-slide h2{
-font-size: 1.5rem !important;
-  }
+    position: absolute;
+    font-size: 1.5rem !important;
+    transform: translateY(-4rem) !important;
+    border-radius:1.5rem;
+    padding: 5px 20px;
+}
 /**contact***/
  .form-group
 {
@@ -402,10 +407,16 @@ font-size: 1.5rem !important;
     height: 65rem !important;
 }
 }
- @media (max-width:577px) {
+ @media (max-width:576px) {
     #headerbgdiv{
-        border-radius: 0;
-        text-align: end;
+        border-radius: 0 0 0 0;
+        padding-bottom: 0 !important;
+    }
+    #introDiv1{
+        padding-right: 25px;
+    }
+    .slideshow{
+        box-shadow: none;
     }
     .button-15 {
         font-size: 15px;
@@ -428,16 +439,12 @@ font-size: 1.5rem !important;
     .slideshow img{
         margin-top: 0rem;
     }
-    .paragraph-slide{
-        margin-top: 0rem;
-    }
     .paragraph-slide h2{
-        top: 0;
-        left: 0;
-        transform: translate(15%,-15%);
-    }
-    .slider-deco{
-        display: none;
+        position: absolute;
+        font-size: 1.5rem !important;
+        transform: translateY(-5rem) !important;
+        border-radius:1.5rem;
+        padding: 5px 20px;
     }
     
     .slideshow img:not(:first-child) {
@@ -449,7 +456,7 @@ font-size: 1.5rem !important;
         display: none !important;
     }
 #section-services{
-    min-height: 95rem;
+    min-height: 75rem;
     width: 100%;
 }
 #section-services svg{
@@ -457,17 +464,6 @@ font-size: 1.5rem !important;
 }
 
 /**contact***/
-.formDiv{
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
-    border-radius: 20px;
-    margin-bottom: 5px;
-    height: auto;
-}
  .form-group
 {
     width: 400px;
@@ -491,7 +487,19 @@ font-size: 1.5rem !important;
     .button-15 {
         font-size: 15px;
       }
- 
+      #headerbgdiv{
+        border-radius: 0 0 0% 0 !important;
+    }
+    #introDiv1{
+        padding-right: 0 30px !important;
+    }
+      .paragraph-slide h2{
+        position: absolute;
+        font-size: 1.2rem !important;
+        transform: translateY(-6rem) !important;
+        border-radius:1.5rem;
+        padding: 5px 20px;
+    }
     /*****services*****/
   
 #section-services svg{
@@ -506,18 +514,6 @@ font-size: 1.5rem !important;
     width: 90%;
 }
 /**contact***/
-
-.formDiv{
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
-    border-radius: 20px;
-    margin-bottom: 5px;
-    height: auto;
-}
  .form-group
 {
     width: 350px;
@@ -534,6 +530,13 @@ font-size: 1.5rem !important;
  }
  @media (max-width:391px) {
  
+    .paragraph-slide h2{
+        position: absolute;
+        font-size: 1.2rem !important;
+        transform: translateY(-5.5rem) !important;
+        border-radius:1.5rem;
+        padding: 5px 20px;
+    }
     #section-services{
         height:100rem;
         width: 100%;
@@ -554,6 +557,13 @@ font-size: 1.5rem !important;
       .navbar-brand{
         font-size: 1.4rem !important;
       }
+      .paragraph-slide h2{
+        position: absolute;
+        font-size: 1.2rem !important;
+        transform: translateY(-5.3rem) !important;
+        border-radius:1.5rem;
+        padding: 5px 20px;
+    }
     #section-services{
          min-height:100rem !important;
     }
@@ -587,6 +597,13 @@ font-size: 1.5rem !important;
       .navbar-brand{
         font-size: 1.4rem !important;
       }
+      .paragraph-slide h2{
+        position: absolute;
+        font-size: 1.2rem !important;
+        transform: translateY(-5.3rem) !important;
+        border-radius:1.5rem;
+        padding: 5px 20px;
+    }
     #section-services{
          min-height:104rem !important;
     }
@@ -618,6 +635,16 @@ font-size: 1.5rem !important;
       .navbar-brand{
         font-size: 1.1rem !important;
       }
+      #sm-intro p{
+        font-size: small !important;
+      }
+      .paragraph-slide h2{
+        position: absolute;
+        font-size: 1.2rem !important;
+        transform: translateY(-5.2rem) !important;
+        border-radius:1.5rem;
+        padding: 5px 20px;
+    }
     #section-services{
         min-height:110rem !important;
     }
