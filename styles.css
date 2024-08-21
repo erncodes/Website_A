@@ -103,7 +103,7 @@ html, body {width: auto!important; overflow-x: hidden!important}
 }
 
 #headerbgdiv{
-    background-image: url("images/compare-fibre-INNsF0Zz_kQ-unsplash.jpg");
+    background-image: url(images/compare-fibre-INNsF0Zz_kQ-unsplash.jpg);
     background-size: cover;
     background-position: center;
     height: 80vh; width: 110%;
