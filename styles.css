@@ -102,7 +102,7 @@
 }
 
 #headerbgdiv{
-    background-image: url("/images/compare-fibre-INNsF0Zz_kQ-unsplash.jpg");
+    background-image: url("images/compare-fibre-INNsF0Zz_kQ-unsplash.jpg");
     background-size: cover;
     background-position: center;
     height: 80vh; width: 100%;
@@ -250,7 +250,7 @@
   /*****contact*****/
 .contact-section {
     height: 80vh;
-    width: 100%;
+    width: 105%;
     background-image: url(/imageS/matt-wang-lnjQDLEKppI-unsplash.jpg);
     background-position: center;
     transform: translateX(0);
@@ -288,7 +288,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
     box-shadow: rgba(255, 255, 255, 0.684) 0px 5px 15px;
     border-radius: 10px;
 }
@@ -592,8 +591,7 @@ form .button-15{
 {
     width: 400px;
 }
-.addressDiv{
-}
+
 /*****footer*****/
 .copyrights-content p{
     font-size: 0.85rem;
